@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,159 @@
             padding: 0;
             font-family: 'Montserrat', sans-serif;
         }
+        nav {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+nav img {
+    height: 50px;
+    width: 50px;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav li {
+    padding: 0.5rem 0;
+    position: relative;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+nav li:hover {
+    transform: translateY(-2px);
+}
+
+nav a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #9a3447;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #9a3447;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 8px 0;
+    margin-top: 10px;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+    color: #333;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #9a3447;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.incubate-btn {
+    background-color: transparent;
+    color: #9a3447;
+    border: 2px solid #9a3447;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.incubate-btn:hover {
+    background-color: #9a3447;
+    color: white;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    .dropdown {
+        margin-top: 1rem;
+    }
+
+    .dropdown-menu {
+        position: relative;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+}
         .title {
             text-align: center;
             padding: 3rem 2rem;
@@ -170,6 +322,32 @@
     </style>
 </head>
 <body>
+    <nav>
+        <div>
+            <img src="/images/icon copy.gif" alt="CITIL Logo">
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="/CITIL/aboutus.html">About Us</a></li>
+            <li><a href="#">Incubation</a></li>
+            <li><a href="#">Facilities</a></li>
+            <li><a href="#">Startups</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+        <div class="dropdown">
+            <button class="incubate-btn" onclick="toggleDropdown(event)">
+                IN-CUBATE
+            </button>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a class="dropdown-item" href="#" onclick="closeDropdown()">Corporate Innovation Form</a>
+                <a class="dropdown-item" href="#" onclick="closeDropdown()">Problem statements Form</a>
+                <a class="dropdown-item" href="#" onclick="closeDropdown()">Strategies Form</a>
+                <a class="dropdown-item" href="#" onclick="closeDropdown()">Incubate Form</a>
+            </div>
+        </div>
+    </nav>
     <div class="title">
         <p>ABOUT US</p>
     </div>
@@ -240,9 +418,9 @@
                 </div>
             </a>
         </div>
-    </div>
+    </div> -->
 
-    <footer>
+    <!-- <footer>
         <div class="left">
             <p>Copyright © 2025 Innovation Labs - All Rights Reserved.</p>
         </div>
@@ -254,6 +432,467 @@
         <div class="right">
             <p>Powered by <span>Innovation Labs</span></p>
         </div>
+    </footer> -->
+    <!-- <footer>
+        <div class="left">
+          <p>Copyright &copy; 2023 CITIL - All Rights Reserved.</p>
+        </div>
+        <div class="center">
+          <a href="https://www.linkedin.com/company/citbif/" target="_blank"><img class="icons"
+              src="img/common/linkedin.svg" alt=""></a>
+          <a href="https://www.instagram.com/citinnovationlabs/" target="_blank"><img class="icons"
+              src="img/common/instagram.svg" alt=""></a>
+          <a href="https://twitter.com/Cit_Inno_Labs" target="_blank"><img class="icons" src="img/common/x.svg" alt=""></a>
+        </div>
+        <div class="right">
+          <p>Powered by <a href="https://www.genzmarketers.in/" target="_blank"><span>Gen Z Marketers</span></a></p>
+        </div>
+      </footer>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <title>About Us</title>
+    <style>
+        :root {
+            --primary-color: #2D3436;
+            --accent-color: #AD163A;
+            --bg-light: #f8f9fa;
+            --text-dark: #2D3436;
+            --text-light: #6c757d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: var(--bg-light);
+            overflow-x: hidden;
+        }
+
+        .title {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .title::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 60%);
+            animation: pulse 4s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.5); opacity: 0.2; }
+            100% { transform: scale(1); opacity: 0.5; }
+        }
+
+        .title p {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: white;
+            margin: 0;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .main {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .heading-container {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .content {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            padding: 2rem;
+        }
+
+        .tiles {
+            text-align: center;
+            perspective: 1000px;
+        }
+
+        .card-wrapper {
+            position: relative;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .tiles:hover .card-wrapper {
+            transform: rotateY(180deg);
+        }
+
+        .cards-front,
+        .cards-back {
+            width: 250px;
+            height: 300px;
+            position: absolute;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            margin: 0 auto;
+        }
+
+        .cards-front {
+            background: white;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .cards-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .cards-back {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            color: white;
+        }
+        .members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+        .tiles {
+            text-align: center;
+        }
+
+        .cards {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .cards:hover {
+            transform: translateY(-5px);
+        }
+
+
+        .caption {
+            font-weight: 600;
+            margin: 1rem 0;
+            color: var(--text-dark);
+            font-size: 1.2rem;
+        }
+
+        .text1, .text2, .text3, .text4 {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .text1, .text3 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+        }
+
+        .text1::after, .text3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--accent-color);
+        }
+
+        .text2, .text4 {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .contactus {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            padding: 4rem 2rem;
+            background: white;
+            margin-top: 4rem;
+            box-shadow: 0 -10px 20px rgba(0,0,0,0.05);
+        }
+
+        .icon {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1rem;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .icon img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 350px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-3px);
+            /* background:  */
+        }
+
+        .social-icons img {
+            width: 20px;
+            height: 20px;
+            filter: brightness(0) invert(1);
+        }
+
+        @media (max-width: 768px) {
+            .title p {
+                font-size: 2.5rem;
+            }
+            
+            .text1, .text3 {
+                font-size: 2rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Scroll Animation */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <p>ABOUT US</p>
+    </div>
+
+    <div class="main">
+        <div class="heading-container">
+            <p class="content">Our Innovation Lab is a dynamic business incubation center dedicated to nurturing and accelerating the growth of innovative startups. We provide comprehensive support, mentorship, and resources to help transform groundbreaking ideas into successful ventures.</p>
+        </div>
+    </div>
+
+    <section>
+        <p class="text1 scroll-animate">MEET OUR LEADERSHIP TEAM</p>
+        <p class="text2 scroll-animate">The innovative minds behind our success</p>
+        <div class="members">
+            <div class="tiles">
+                <img src="/api/placeholder/200/200" class="cards" alt="Team Member">
+                <p class="caption">Dr. Sarah Johnson</p>
+            </div>
+            <div class="tiles">
+                <img src="/api/placeholder/200/200" class="cards" alt="Team Member">
+                <p class="caption">Prof. Michael Chen</p>
+            </div>
+            <div class="tiles">
+                <img src="/api/placeholder/200/200" class="cards" alt="Team Member">
+                <p class="caption">Dr. Emily Rodriguez</p>
+            </div>
+            <div class="tiles">
+                <img src="/api/placeholder/200/200" class="cards" alt="Team Member">
+                <p class="caption">Dr. David Kim</p>
+            </div>
+        </div>
+
+        <p class="text3 scroll-animate">OUR EXPERT MENTORS</p>
+        <p class="text4 scroll-animate">Industry leaders guiding the next generation</p>
+        <div class="members">
+            <div class="tiles">
+                <img src="/api/placeholder/200/200" class="cards" alt="Mentor">
+                <p class="caption">James Wilson</p>
+            </div>
+            <div class="tiles">
+                <img src="/api/placeholder/200/200" class="cards" alt="Mentor">
+                <p class="caption">Dr. Lisa Park</p>
+            </div>
+            <div class="tiles">
+                <img src="/api/placeholder/200/200" class="cards" alt="Mentor">
+                <p class="caption">Robert Martinez</p>
+            </div>
+            <div class="tiles">
+                <img src="/api/placeholder/200/200" class="cards" alt="Mentor">
+                <p class="caption">Dr. Amanda Lee</p>
+            </div>
+            <!-- Repeat for other mentors -->
+        </div>
+    </section>
+
+    <div class="contactus">
+        <div class="scroll-animate">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9918079477025!2d80.04247821461199!3d12.972375590855298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f4d07355bab5%3A0xbb6063169c4ed4d9!2sChennai%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1681281752105!5m2!1sen!2sin" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+        <div class="icon scroll-animate">
+            <img src="/api/placeholder/40/40" alt="Location">
+            <p><span>Innovation Labs</span><br>123 Innovation Street<br>Tech City, ST 12345</p>
+        </div>
+        <div class="scroll-animate">
+            <a class="mail" href="mailto:contact@innovationlabs.com">
+                <div class="icon">
+                    <img src="/api/placeholder/40/40" alt="Email">
+                    <p>Write to us at:<br><span>contact@innovationlabs.com</span></p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="left">
+                <p>Copyright © 2025 Innovation Labs - All Rights Reserved.</p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="/images/PhInstagramLogoFill.svg" alt="LinkedIn"></a>
+                <a href="#"><img src="/images/BxBxlLinkedinSquare.svg" alt="Instagram"></a>
+                <a href="#"><img src="/images/FeTwitter.svg" alt="Twitter"></a>
+            </div>
+            <div class="right">
+                <p>Powered by <span>Innovation Labs</span></p>
+            </div>
+        </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Scroll animation
+        const scrollElements = document.querySelectorAll('.scroll-animate');
+
+        const elementInView = (el, percentageScroll = 100) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (
+                elementTop <= 
+                ((window.innerHeight || document.documentElement.clientHeight) * (percentageScroll/100))
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add('visible');
+        };
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 90)) {
+                    displayScrollElement(el);
+                }
+            })
+        }
+
+        window.addEventListener('scroll', () => {
+            handleScrollAnimation();
+        });
+
+        // Initialize
+        handleScrollAnimation();
+    </script>
 </body>
 </html>
