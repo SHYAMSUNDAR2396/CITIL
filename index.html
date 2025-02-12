@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIT Innovation Labs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div>
+            <img src="/images/icon copy.gif" alt="CITIL Logo">
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="/CITIL/aboutus.html">About Us</a></li>
+            <li><a href="#">Incubation</a></li>
+            <li><a href="#">Facilities</a></li>
+            <li><a href="#">Startups</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+        <div class="dropdown">
+            <button class="incubate-btn" onclick="toggleDropdown(event)">
+                IN-CUBATE
+            </button>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a class="dropdown-item" href="#" onclick="closeDropdown()">Corporate Innovation Form</a>
+                <a class="dropdown-item" href="#" onclick="closeDropdown()">Problem statements Form</a>
+                <a class="dropdown-item" href="#" onclick="closeDropdown()">Strategies Form</a>
+                <a class="dropdown-item" href="#" onclick="closeDropdown()">Incubate Form</a>
+            </div>
+        </div>
+    </nav>
+    
+<div class="slider">
+    <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav"/>
+    <input type="radio" name="slider" title="slide2" class="slider__nav"/>
+    <input type="radio" name="slider" title="slide3" class="slider__nav"/>
+    <input type="radio" name="slider" title="slide4" class="slider__nav"/>
+    <div class="slider__inner">
+      <div class="slider__contents"><i class="slider__image fa fa-codepen"></i>
+        <h2 class="slider__caption">codepen</h2>
+        <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+      </div>
+      <div class="slider__contents"><i class="slider__image fa fa-newspaper-o"></i>
+        <h2 class="slider__caption">newspaper-o</h2>
+        <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+      </div>
+      <div class="slider__contents"><i class="slider__image fa fa-television"></i>
+        <h2 class="slider__caption">television</h2>
+        <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+      </div>
+      <div class="slider__contents"><i class="slider__image fa fa-diamond"></i>
+        <h2 class="slider__caption">diamond</h2>
+        <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+      </div>
+    </div>
+  </div>
+    <script src="index.js"></script>
+</body>
+</html>
