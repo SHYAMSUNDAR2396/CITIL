@@ -480,7 +480,159 @@ nav a:hover::after {
             background: var(--bg-light);
             overflow-x: hidden;
         }
+        nav {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+nav img {
+    height: 50px;
+    width: 50px;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav li {
+    padding: 0.5rem 0;
+    position: relative;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+nav li:hover {
+    transform: translateY(-2px);
+}
+
+nav a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #9a3447;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #9a3447;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 8px 0;
+    margin-top: 10px;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+    color: #333;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #9a3447;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.incubate-btn {
+    background-color: transparent;
+    color: #9a3447;
+    border: 2px solid #9a3447;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.incubate-btn:hover {
+    background-color: #9a3447;
+    color: white;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    .dropdown {
+        margin-top: 1rem;
+    }
+
+    .dropdown-menu {
+        position: relative;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+}
         .title {
             text-align: center;
             padding: 6rem 2rem;
@@ -662,8 +814,136 @@ nav a:hover::after {
             font-size: 1.2rem;
             font-weight: 500;
         }
-
         .contactus {
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, #520014 0%, #AD163A 50%, #520114 100%);
+    padding: 8rem 6rem;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contactus::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+}
+
+iframe {
+    width: 1000px;
+    border-radius: 25px;
+    height: 500px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+iframe:hover {
+    transform: translateY(-5px);
+}
+
+.mail {
+    color: white;
+    transition: all 0.3s ease;
+    position: relative;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mail:hover {
+    color: #ffd700;
+    transform: translateY(-2px);
+}
+
+.mail::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #ffd700;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.mail:hover::after {
+    transform: scaleX(1);
+}
+
+@media (max-width: 1579px) {
+    .transparent {
+        height: 1900px;
+    }
+
+    .contactus {
+        flex-direction: column;
+        gap: 4rem;
+        padding: 5rem 3rem;
+    }
+
+    iframe {
+        width: 100%;
+        max-width: 500px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 978px) {
+    .transparent {
+        height: 2700px;
+    }
+
+    .heading-container p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .mission img {
+        width: 92%;
+        margin: 4% 4%;
+        border-radius: 12px;
+    }
+
+    .cit {
+        overflow-x: hidden;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .title {
+        font-size: 2.2rem;
+        margin: -1% 0 1%;
+        font-weight: 600;
+    }
+
+    .text1 {
+        font-size: 2.4rem;
+        font-weight: 700;
+    }
+
+    .text2 {
+        font-size: 1.3rem;
+        opacity: 0.9;
+    }
+
+    .content {
+        font-size: 1.3rem;
+        padding: 2rem;
+        line-height: 1.7;
+    }
+}
+        /* .contactus {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 3rem;
@@ -699,7 +979,7 @@ nav a:hover::after {
             height: 350px;
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
+        } */
 
         footer {
             background: var(--primary-color);
@@ -773,6 +1053,32 @@ nav a:hover::after {
     </style>
 </head>
 <body>
+    <nav>
+        <div>
+            <img src="/images/icon copy.gif" alt="CITIL Logo">
+        </div>
+        <ul>
+            <li><a href="/CITIL/index.html">Home</a></li>
+            <li><a href="/CITIL/aboutus.html">About Us</a></li>
+            <li><a href="#">Incubation</a></li>
+            <li><a href="/CITIL/facilities.html">Facilities</a></li>
+            <li><a href="#">Startups</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+        <div class="dropdown">
+            <button class="incubate-btn" onclick="toggleDropdown(event)">
+                IN-CUBATE
+            </button>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a class="dropdown-item" href="#" onclick="closeDropdown()">Corporate Innovation Form</a>
+                <a class="dropdown-item" href="#" onclick="closeDropdown()">Problem statements Form</a>
+                <a class="dropdown-item" href="#" onclick="closeDropdown()">Strategies Form</a>
+                <a class="dropdown-item" href="#" onclick="closeDropdown()">Incubate Form</a>
+            </div>
+        </div>
+    </nav>
     <div class="title">
         <p>ABOUT US</p>
     </div>
@@ -828,7 +1134,7 @@ nav a:hover::after {
         </div>
     </section>
 
-    <div class="contactus">
+    <!-- <div class="contactus">
         <div class="scroll-animate">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9918079477025!2d80.04247821461199!3d12.972375590855298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f4d07355bab5%3A0xbb6063169c4ed4d9!2sChennai%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1681281752105!5m2!1sen!2sin" allowfullscreen="allowfullscreen"></iframe>
         </div>
@@ -844,8 +1150,26 @@ nav a:hover::after {
                 </div>
             </a>
         </div>
-    </div>
-
+    </div> -->
+    <div class="contactus">
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9918079477025!2d80.04247821461199!3d12.972375590855298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f4d07355bab5%3A0xbb6063169c4ed4d9!2sChennai%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1681281752105!5m2!1sen!2sin"
+            frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+        <div class="icon">
+          <img src="img/loc.svg" alt="msg.svg">
+          <p><span>CITIL</span> , CIT Chennai<br>Sarathy Nagar, Kundrathur, Chennai<br>Tamilnadu - 600069</p>
+        </div>
+        <div>
+          <a class="mail" href="mailto:citbif@citchennai.net">
+            <div class="icon">
+              <img src="img/msg.svg" alt="">
+              <p>Write to us at: <br><span>citbif@citchennai.net</span></p>
+            </div>
+          </a>
+        </div>
+      </div>
     <footer>
         <div class="footer-content">
             <div class="left">
@@ -890,8 +1214,6 @@ nav a:hover::after {
         window.addEventListener('scroll', () => {
             handleScrollAnimation();
         });
-
-        // Initialize
         handleScrollAnimation();
     </script>
 </body>

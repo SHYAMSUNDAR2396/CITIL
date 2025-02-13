@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <title>Startups</title>
+    <style>
+        :root {
+            --primary-color: #2D3436;
+            --accent-color: #AD163A;
+            --bg-light: #f8f9fa;
+            --text-dark: #2D3436;
+            --text-light: #6c757d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--bg-light);
+            overflow-x: hidden;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav img {
+            height: 50px;
+            width: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav li {
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        nav li:hover {
+            transform: translateY(-2px);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #AD163A;
+        }
+
+        .incubate-btn {
+            background-color: transparent;
+            color: #AD163A;
+            border: 2px solid #AD163A;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .incubate-btn:hover {
+            background-color: #AD163A;
+            color: white;
+        }
+
+        /* Title Section */
+        .title {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .title p {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Startups Section */
+        .startups {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .startup-card {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .startup-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .startup-card img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .startup-card h2 {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .startup-card p {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .startup-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .startup-card img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <img src="/images/icon copy.gif" alt="CITIL Logo">
+        </div>
+        <ul>
+            <li><a href="/CITIL/index.html">Home</a></li>
+            <li><a href="/CITIL/aboutus.html">About Us</a></li>
+            <li><a href="#">Incubation</a></li>
+            <li><a href="#">Facilities</a></li>
+            <li><a href="#">Startups</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+        <button class="incubate-btn">IN-CUBATE</button>
+    </nav>
+
+    <div class="title">
+        <p>STARTUPS</p>
+    </div>
+
+    <div class="startups">
+        <div class="startup-card">
+            <img src="/images/startup1.jpg" alt="Startup 1">
+            <div>
+                <h2>InnovateX</h2>
+                <p>InnovateX is a technology-driven startup focusing on AI and IoT solutions for smart cities.</p>
+            </div>
+        </div>
+
+        <div class="startup-card">
+            <img src="/images/startup2.jpg" alt="Startup 2">
+            <div>
+                <h2>GreenEnergy</h2>
+                <p>GreenEnergy specializes in renewable energy solutions to promote sustainability.</p>
+            </div>
+        </div>
+
+        <div class="startup-card">
+            <img src="/images/startup3.jpg" alt="Startup 3">
+            <div>
+                <h2>MedTech Solutions</h2>
+                <p>MedTech Solutions is revolutionizing healthcare with AI-powered diagnostic tools.</p>
+            </div>
+        </div>
+
+        <div class="startup-card">
+            <img src="/images/startup4.jpg" alt="Startup 4">
+            <div>
+                <h2>AutoBots</h2>
+                <p>AutoBots is an innovative robotics startup developing automation solutions for industries.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright © 2025 Innovation Labs - All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
