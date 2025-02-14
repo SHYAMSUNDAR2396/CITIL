@@ -127,7 +127,6 @@ nav a:hover::after {
     color: white;
 }
 
-/* Mobile responsiveness */
 @media screen and (max-width: 768px) {
     nav {
         flex-direction: column;

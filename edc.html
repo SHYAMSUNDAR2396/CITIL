@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrepreneurship Development Cell | CIT Innovation Labs</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" />
+    <style>
+        :root {
+            --primary-color: #2D3436;
+            --accent-color: #AD163A;
+            --bg-light: #f8f9fa;
+            --text-dark: #2D3436;
+            --text-light: #6c757d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        nav img {
+            height: 50px;
+            width: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(to bottom, #640D14, #960E18);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        .content {
+            max-width: 1200px;
+            width: 100%;
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-light);
+        }
+
+        .section ul {
+            list-style: disc;
+            margin-left: 1.5rem;
+            color: var(--text-light);
+        }
+        /* Image Gallery */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .desc {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            padding: 0.5rem;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .gallery-item:hover .desc {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .section p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div>
+            <img src="/images/icon copy.gif" alt="CITIL Logo">
+        </div>
+        <ul>
+            <li><a href="/CITIL/index.html">Home</a></li>
+            <li><a href="/CITIL/aboutus.html">About Us</a></li>
+            <li><a href="#">Incubation</a></li>
+            <li><a href="/CITIL/facilities.html">Facilities</a></li>
+            <li><a href="/CITIL/startups.html">Startups</a></li>
+            <li><a href="/CITIL/events.html">Events</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="/CITIL/contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Entrepreneurship Development Cell</h1>
+        <p>Empowering students to transform innovative ideas into successful ventures.</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Mission Section -->
+        <div class="section">
+            <h2>Our Mission</h2>
+            <p>To foster the entrepreneurial spirit among students by providing the necessary resources, mentorship, and support to transform innovative ideas into successful business ventures.</p>
+        </div>
+
+        <!-- Objectives Section -->
+        <div class="section">
+            <h2>Objectives</h2>
+            <ul>
+                <li>Instill entrepreneurial mindset among students.</li>
+                <li>Provide training and mentorship for startup development.</li>
+                <li>Organize workshops, seminars, and events to promote entrepreneurship.</li>
+                <li>Facilitate networking opportunities with industry experts and successful entrepreneurs.</li>
+                <li>Offer resources and support for prototype development and business planning.</li>
+            </ul>
+        </div>
+
+        <!-- Activities Section -->
+        <div class="section">
+            <h2>Our Activities</h2>
+            <p>We conduct a variety of programs and events to nurture entrepreneurship, including:</p>
+            <ul>
+                <li>Entrepreneurship Awareness Camps</li>
+                <li>Skill Development Workshops</li>
+                <li>Startup Pitching Sessions</li>
+                <li>Mentorship Programs</li>
+                <li>Networking Events with Industry Leaders</li>
+            </ul>
+        </div>
+
+        <!-- Contact Information Section -->
+        <div class="section">
+            <h2>Contact Us</h2>
+            <p>If you're interested in joining the EDC or have any queries, feel free to reach out:</p>
+            <p>Email: edc@citil.in</p>
+            <p>Phone: +91-12345-67890</p>
+        </div>
+    </div>
+    <!-- Image Gallery Section -->
+    <div class="section">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="images/event1.jpg" alt="EDC Workshop">
+                <div class="desc">EDC Workshop</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/event2.jpg" alt="Startup Pitching Session">
+                <div class="desc">Startup Pitching Session</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/event3.jpg" alt="Networking Event">
+                <div class="desc">Networking Event</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/event4.jpg" alt="Mentorship Program">
+                <div class="desc">Mentorship Program</div>
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+</div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright © 2025 CIT Innovation Labs - All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

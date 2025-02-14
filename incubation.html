@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incubation | CIT Innovation Labs</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" />
+    <style>
+        :root {
+            --primary-color: #2D3436;
+            --accent-color: #AD163A;
+            --bg-light: #f8f9fa;
+            --text-dark: #2D3436;
+            --text-light: #6c757d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--bg-light);
+            overflow-x: hidden;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav img {
+            height: 50px;
+            width: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #AD163A;
+        }
+
+        /* Title Section */
+        .title {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+        }
+
+        .title p {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        /* Incubation Container */
+        .incubation-container {
+            max-width: 900px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .incubation-container h2 {
+            text-align: center;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Carousel Section */
+        .carousel-container {
+            text-align: center;
+            position: relative;
+        }
+
+        .carousel-slide {
+            display: none;
+            padding: 1.5rem;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-slide.active {
+            display: block;
+        }
+
+        /* Carousel Dots */
+        .carousel-dots {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: var(--accent-color);
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-3px);
+            /* background:  */
+        }
+
+        .social-icons img {
+            width: 20px;
+            height: 20px;
+            filter: brightness(0) invert(1);
+        }
+
+        @media (max-width: 768px) {
+            .title p {
+                font-size: 2.5rem;
+            }
+            
+            .text1, .text3 {
+                font-size: 2rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Scroll Animation */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div>
+            <img src="/images/icon copy.gif" alt="CITIL Logo">
+        </div>
+        <ul>
+            <li><a href="/CITIL/index.html">Home</a></li>
+            <li><a href="/CITIL/aboutus.html">About Us</a></li>
+            <li><a href="#">Incubation</a></li>
+            <li><a href="/CITIL/facilities.html">Facilities</a></li>
+            <li><a href="/CITIL/startups.html">Startups</a></li>
+            <li><a href="/CITIL/events.html">Events</a></li>
+            <li><a href="/CITIL/careers.html">Careers</a></li>
+            <li><a href="/CITIL/contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Title Section -->
+    <div class="title">
+        <p>INCUBATION PROGRAM</p>
+    </div>
+
+    <!-- Incubation Stages -->
+    <div class="incubation-container">
+        <h2>Stages of Incubation</h2>
+
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <h3>1. Application & Selection</h3>
+                <p>Startups apply for the incubator program, with selection based on innovation, feasibility, and scalability.</p>
+            </div>
+
+            <div class="carousel-slide">
+                <h3>2. Onboarding & Orientation</h3>
+                <p>Startups are introduced to facilities, mentors, and support networks available in the incubation space.</p>
+            </div>
+
+            <div class="carousel-slide">
+                <h3>3. Market Research & Validation</h3>
+                <p>Market research support is provided to validate startup ideas and optimize business models.</p>
+            </div>
+
+            <div class="carousel-slide">
+                <h3>4. Product Development & Prototyping</h3>
+                <p>Access to labs, resources, and mentorship for product development and prototyping.</p>
+            </div>
+
+            <div class="carousel-slide">
+                <h3>5. Funding & Investment</h3>
+                <p>Guidance on financial planning, fundraising, and investor connections.</p>
+            </div>
+
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+          <div class="left">
+              <p>Copyright © 2025 Innovation Labs - All Rights Reserved.</p>
+          </div>
+          <div class="social-icons">
+              <a href="#"><img src="/images/PhInstagramLogoFill.svg" alt="LinkedIn"></a>
+              <a href="#"><img src="/images/BxBxlLinkedinSquare.svg" alt="Instagram"></a>
+              <a href="#"><img src="/images/FeTwitter.svg" alt="Twitter"></a>
+          </div>
+          <div class="right">
+              <p>Powered by <span>Innovation Labs</span></p>
+          </div>
+      </div>
+  </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let slides = document.querySelectorAll(".carousel-slide");
+                let dots = document.querySelectorAll(".dot");
+
+                if (n > slides.length) { slideIndex = 1; }
+                if (n < 1) { slideIndex = slides.length; }
+
+                slides.forEach(slide => slide.classList.remove("active"));
+                dots.forEach(dot => dot.classList.remove("active"));
+
+                slides[slideIndex - 1].classList.add("active");
+                dots[slideIndex - 1].classList.add("active");
+            }
+
+            setInterval(function () {
+                showSlides(slideIndex += 1);
+            }, 3000);
+
+            window.currentSlide = currentSlide;
+        });
+    </script>
+</body>
+
+</html>
