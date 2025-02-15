@@ -649,7 +649,8 @@ nav a:hover::after {
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 60%);
+            /* background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 60%); */
+            background: linear-gradient(90deg, #520014 0%, #A70026 49.85%, #520114 100%);
             animation: pulse 4s infinite;
         }
 
@@ -822,7 +823,7 @@ nav a:hover::after {
     text-align: center;
     color: white;
     font-size: 1.2rem;
-    background: linear-gradient(135deg, #520014 0%, #AD163A 50%, #520114 100%);
+    background: linear-gradient(90deg, #520014 0%, #A70026 49.85%, #520114 100%);
     padding: 8rem 6rem;
     box-shadow: 0 -8px 24px rgba(0,0,0,0.15);
     position: relative;
@@ -898,6 +899,42 @@ iframe:hover {
         height: 350px;
     }
 }
+.slider2 {
+    align-items: center;
+    background: linear-gradient(90deg, #f5f5f5 0%, #f5f5f5 49.85%, #f5f5f5 100%);
+    padding: 75px 50px 50px;
+    overflow-x: hidden;
+}
+
+.slide {
+    display: flex;
+    margin: auto;
+}
+
+.slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    height: auto;
+    gap: 5rem;
+}
+
+.slide img {
+    margin-top: -25px;
+    gap: 4rem;
+    width: 150px;
+    height: auto;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 9))
+    }
+}
+
 
 @media (max-width: 978px) {
     .transparent {
@@ -1058,14 +1095,14 @@ iframe:hover {
             <img src="/images/icon copy.gif" alt="CITIL Logo">
         </div>
         <ul>
-            <li><a href="/CITIL/index.html">Home</a></li>
-            <li><a href="/CITIL/aboutus.html">About Us</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/aboutus.html">About Us</a></li>
             <li><a href="#">Incubation</a></li>
-            <li><a href="/CITIL/facilities.html">Facilities</a></li>
-            <li><a href="#">Startups</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact us</a></li>
+            <li><a href="/facilities.html">Facilities</a></li>
+            <li><a href="/startups.html">Startups</a></li>
+            <li><a href="/events.html">Events</a></li>
+            <li><a href="/careers.html">Careers</a></li>
+            <li><a href="/contactup.html">Contact us</a></li>
         </ul>
         <div class="dropdown">
             <button class="incubate-btn" onclick="toggleDropdown(event)">
@@ -1088,7 +1125,97 @@ iframe:hover {
             <p class="content">Our Innovation Lab is a dynamic business incubation center dedicated to nurturing and accelerating the growth of innovative startups. We provide comprehensive support, mentorship, and resources to help transform groundbreaking ideas into successful ventures.</p>
         </div>
     </div>
-
+    <div class="slider2">
+        <div class="slide-track">
+          <div class="slide">
+            <img src="img/portfolio/airos.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/aivirex.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/ares attire.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/aroundme.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/arwin.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/bio add.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/blue code.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/cmsd.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/Colakin.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/diatom.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/edigim.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/Farm XS.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/genz.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/gogo soon.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/gok.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/gomonetize.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/hair-o-zen.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/heal green.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/jagetz.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/karking.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/kkr.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/mechimed.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/my shop.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/navumi.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/quantum pixel solutins.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/rights brain india.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/sns.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/techmedz.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="img/portfolio/thaalam.png" alt="" />
+          </div>
+        </div>
+      </div>
     <section>
         <p class="text1 scroll-animate">MEET OUR LEADERSHIP TEAM</p>
         <p class="text2 scroll-animate">The innovative minds behind our success</p>
