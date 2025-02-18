@@ -1,65 +1,29 @@
-function toggleDropdown(event) {
-    event.stopPropagation(); // Prevent event bubbling
-    const dropdownMenu = document.getElementById('dropdownMenu');
-    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-}
+var index = 0;
+var slides = document.querySelectorAll(".slides");
+var dot = document.querySelectorAll(".dot");
 
-function closeDropdown() {
-    const dropdownMenu = document.getElementById('dropdownMenu');
-    dropdownMenu.style.display = 'none';
-}
+function changeSlide(){
 
-// Close dropdown when clicking outside
-document.addEventListener('click', function(event) {
-    const dropdown = document.querySelector('.dropdown');
-    const dropdownMenu = document.getElementById('dropdownMenu');
-    
-    if (!dropdown.contains(event.target)) {
-        dropdownMenu.style.display = 'none';
-    }
-});
-const items = document.querySelectorAll('img');
-const itemCount = items.length;
-const nextItem = document.querySelector('.next');
-const previousItem = document.querySelector('.previous');
-let count = 0;
-
-function showNextItem() {
-  items[count].classList.remove('active');
-
-  if(count < itemCount - 1) {
-    count++;
-  } else {
-    count = 0;
+  if(index<0){
+    index = slides.length-1;
   }
-
-  items[count].classList.add('active');
-  console.log(count);
-}
-
-function showPreviousItem() {
-  items[count].classList.remove('active');
-
-  if(count > 0) {
-    count--;
-  } else {
-    count = itemCount - 1;
-  }
-
-  items[count].classList.add('active');
-  console.log(count);
-}
-
-function keyPress(e) {
-  e = e || window.event;
   
-  if (e.keyCode == '37') {
-    showPreviousItem();
-  } else if (e.keyCode == '39') {
-    showNextItem();
+  if(index>slides.length-1){
+    index = 0;
   }
+  
+  for(let i=0;i<slides.length;i++){
+    slides[i].style.display = "none";
+    dot[i].classList.remove("active");
+  }
+  
+  slides[index].style.display= "block";
+  dot[index].classList.add("active");
+  
+  index++;
+  
+  setTimeout(changeSlide,2000);
+  
 }
 
-nextItem.addEventListener('click', showNextItem);
-previousItem.addEventListener('click', showPreviousItem);
-document.addEventListener('keydown', keyPress);
+changeSlide();
